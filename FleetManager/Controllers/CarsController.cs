@@ -13,13 +13,12 @@ namespace FleetManager.Controllers
     {
         private readonly IRepository<Car> _carRepository;
         private readonly IRepository<Location> _locationRepository;
-        private readonly Uri _baseUri;
+        private readonly Uri _baseUri = new Uri("http://localhost:44319");
 
         public CarsController(IRepository<Car> carRepository, IRepository<Location> locationRepository)
         {
             _carRepository = carRepository;
             _locationRepository = locationRepository;
-            _baseUri = new Uri("http://localhost:44319");
         }
 
         [HttpGet]

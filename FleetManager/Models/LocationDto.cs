@@ -21,7 +21,7 @@ namespace FleetManager.Models
             return new LocationDto
             {
                 Id = location.Id,
-                Link = new ApiLink("/location/{0}", location.Id),
+                Link = new ApiLink("/locations/{0}", location.Id),
                 Address = location.Address,
                 Zip = location.Zip,
                 City = location.City,
